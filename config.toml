@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "GalaxyStar"
+title = "GalacticStar"
 theme = "learn"
 
 [outputs]
