@@ -1,8 +1,17 @@
 [build]
-  command = "yarn build"
-  publish = "dist"
-[build.environment]
-  YARN_VERSION = "1.3.2"
+  command = "hugo"
+  publish = "public"
+
 
 [context.deploy-preview]
-  command = "yarn build-preview"
+  command = "hugo -b $DEPLOY_PRIME_URL"
+
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.37"
+
+
+[context.production.environment]
+  HUGO_VERSION = "0.37"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
