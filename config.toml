@@ -7,7 +7,7 @@ theme = "learn"
   home = [ "HTML", "RSS", "JSON"]
 
 [params]
-  editURL = ""
+  editURL = "https://github.com/fried/GalacticStar/tree/master/content"
   author = "Jason Fried"
   description = "A knowledge base for a homebrew total conversion of M&M 3e for Star Wars"
   showVisitedLinks = false
