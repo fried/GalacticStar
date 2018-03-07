@@ -2,3 +2,19 @@ baseURL = "/"
 languageCode = "en-us"
 title = "GalaxyStar"
 theme = "learn"
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
+
+[params]
+  editURL = ""
+  author = "Jason Fried"
+  description = "A knowledge base for a homebrew total conversion of M&M 3e for Star Wars"
+  showVisitedLinks = false
+  disableSearch = false
+  disableAssetsBusting = false
+  disableInlineCopyToClipBoard = false
+  disableShortcutsTitle = false
+  disableLanguageSwitchingButton = false
+  ordersectionsby = "weight"
+  themeVariant = "blue"
