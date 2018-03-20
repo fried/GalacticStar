@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: fried/GalacticStar
-  branch: master
+  name: git-gateway
 
 media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "img"
