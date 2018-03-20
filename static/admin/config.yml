@@ -1,18 +1,37 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: fried/GalacticStar
+  branch: master
 
 media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "contents"
-    label: "Contents" # Used in the UI, ie.: "New Post"
-    folder: "content" # The path to the folder where the documents are stored
+  - name: "story"
+    label: "Story" # Used in the UI, ie.: "New Post"
+    folder: "content/story" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Data", name: "date", widget: "datetime"}
       - {label: "weight", name: "weight", widget: "number", default: 0, valueType: "int", min: 0, max:1000}
+      - {label: "Nav?", name: toc, widget: boolean, default: true}
+      - {label: "Chapter?", name: chapter, widget: boolean, default: false}
+      - {label: "Prefix", name: pre, widget: string} 
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "rules"
+    label: "Rules" # Used in the UI, ie.: "New Post"
+    folder: "content/rules" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "weight", name: "weight", widget: "number", default: 0, valueType: "int", min: 0, max:1000}
+      - {label: "Nav?", name: toc, widget: boolean, default: true}
+      - {label: "Chapter?", name: chapter, widget: boolean, default: false}
+      - {label: "Prefix", name: pre, widget: string} 
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
     label: "Pages"
